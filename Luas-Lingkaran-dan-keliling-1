@@ -1,0 +1,21 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int r,d;
+    float p = 3.14, l, k;
+    cin>>r;
+    l=p*r*r;
+    d=r+r;
+    k = p*d;
+    
+    cout<<l<<endl;
+    cout<<k;
+   
+    return 0;
+}
