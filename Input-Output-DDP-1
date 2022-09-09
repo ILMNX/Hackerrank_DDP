@@ -1,0 +1,32 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    
+    
+    
+    string nama,npm,jrsn;
+    int a,b,c,umur;
+    cin>>nama;
+    cin>>npm;
+    cin.ignore();
+    getline (cin, jrsn);
+    
+    cin>> umur;
+    
+    a=2022;
+    b = umur;
+     c= a - umur;   
+    
+     
+   
+ 
+   
+    cout<< "Nama Saya "  "\""<<nama<< "\""", \numur saya "  "\""<<c<< " Tahun""\""<<", \ndengan NPM ""\"" <<npm<<"\"" ", \ndari Jurusan "<<jrsn;
+    return 0;
+}
