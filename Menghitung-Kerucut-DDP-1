@@ -1,0 +1,30 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int r;
+    int t;
+    float v;
+    int l;
+    float la;
+   float ls;
+    float s;
+    
+     cin>>r;
+     cin>>t;
+    
+    v = (3.14* r *r *t)/3;
+    
+   l = (3.14 * r *t);
+    
+    
+    cout<<v<<endl;
+    cout<<l;
+
+    return 0;
+}
