@@ -1,0 +1,72 @@
+class Parkir:
+    def init(self):
+        self.antrian = []
+
+    def tambah_kendaraan(self, kendaraan):
+        self.antrian.append(kendaraan)
+
+    def hapus_kendaraan(self, kendaraan):
+        if kendaraan in self.antrian:
+            self.antrian.remove(kendaraan)
+
+    def kendaraan_terdepan(self):
+        if self.antrian:
+            return self.antrian[0]
+        else:
+            return None
+
+    def cek_antrian_kosong(self):
+        return len(self.antrian) == 0
+
+    def jumlah_kendaraan(self):
+        return len(self.antrian)
+
+
+
+parkir_mall = Parkir()
+
+while True:
+    print("\n--- Sistem Manajemen Parkir ---")
+    print("1. Tambah kendaraan")
+    print("2. Hapus kendaraan")
+    print("3. Kendaraan terdepan")
+    print("4. Cek antrian kosong")
+    print("5. Jumlah kendaraan dalam antrian")
+    print("0. Keluar")
+
+    pilihan = int(input("Masukkan pilihan: "))
+
+    if pilihan == 1:
+        kendaraan_baru = input("Masukkan jenis kendaraan: ")
+        parkir_mall.tambah_kendaraan(kendaraan_baru)
+        print("Kendaraan", kendaraan_baru, "ditambahkan ke antrian parkir.")
+
+    elif pilihan == 2:
+        kendaraan_keluar = input("Masukkan jenis kendaraan yang keluar: ")
+        parkir_mall.hapus_kendaraan(kendaraan_keluar)
+        print("Kendaraan", kendaraan_keluar, "telah keluar dari antrian parkir.")
+
+    elif pilihan == 3:
+        kendaraan_terdepan = parkir_mall.kendaraan_terdepan()
+        if kendaraan_terdepan:
+            print("Kendaraan terdepan dalam antrian: ", kendaraan_terdepan)
+        else:
+            print("Antrian parkir kosong.")
+
+    elif pilihan == 4:
+        if parkir_mall.cek_antrian_kosong():
+            print("Antrian parkir kosong.")
+        else:
+            print("Antrian parkir tidak kosong.")
+
+    elif pilihan == 5:
+        jumlah_kendaraan = parkir_mall.jumlah_kendaraan()
+        print("Jumlah kendaraan dalam antrian: ", jumlah_kendaraan)
+
+    elif pilihan == 0:
+        break
+
+    else:
+        print("Pilihan tidak valid. Silakan coba lagi.")
+
+    print("Antrian parkir tidak kosong")
